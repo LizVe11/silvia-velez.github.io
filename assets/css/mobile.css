@@ -1,0 +1,258 @@
+/* Navbar */
+#navbar .logo{
+  float: none;
+  text-align: center;
+}
+
+#navbar ul, 
+#navbar ul li {
+  float: none;
+}
+
+#navbar ul li a {
+  padding: 5px;
+}
+
+/* Showcase */
+#showcase-home {
+  height: 30vh;
+  padding: 10px;
+}
+
+#showcase .showcase-banner,
+#showcase-home .showcase-banner{
+  /* background: var(--secondary-color); */
+  height: 100%;
+  width: 80%;
+}
+
+#showcase h1,
+#showcase-home h1 {
+  font-size: 30px;
+  line-height: 1em;
+  padding: 10px;
+}
+
+#showcase p,
+#showcase-home p {
+  font-size: 18px;
+}
+
+/* Portfolio */
+#portfolio .portfolio-nav {
+  display: none;
+}
+
+.box {
+  float: none;
+  width: 100%;
+  padding:10px;
+}
+
+/* Contact */
+#contact {
+  height: 100%;
+}
+
+#contact .box-contact-features {
+  float: none;
+  width: 100%;
+}
+
+#contact .features-contact .box-form{
+  float: none;
+  width: 100%;
+}
+
+/* Single Project */
+.box-portfolio {
+  float: none;
+  width: 100%;
+}
+
+
+/* Footer */
+#main-footer {
+  text-align: center;
+}
+
+#main-footer p,
+#main-footer ul,
+#main-footer ul li {
+  float: none;
+}
+
+
+@media (max-width: 600px){
+/*bloque 2*/
+.list-exp {
+  column-count: 2;
+  column-gap: 1rem;
+  width: 100%;
+}
+.subpage {
+  font-size: 28px;
+}
+.box_info {
+  display: flex;
+  flex-direction: column;
+}
+.box_moreinfo.box-portfolio {
+  display: flex;
+  justify-content: flex-start;
+}
+.blq_explaboral  .media_block {
+  display: flex;
+  flex-direction: column;
+}
+.periodo {
+  padding: 10px 0;
+}
+ul.list-exp li .title {
+  /* font-weight: bold; */
+  font-size: 14px;
+}
+.exp_laboral a {
+  padding: 5px;
+  font-size: 14px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+      padding: 1rem 2rem;
+      margin: 0 auto;
+    }
+      .list_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        background: grey;
+        transition: all 0.3s ease;
+    }
+        .menu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 25%;
+          width: 100%;
+          transform: translateY(-50%);
+
+          &-item {
+            padding-bottom: 1rem;
+            width: 100%;
+            text-align: left;
+
+            &:nth-child(1) a {
+              transition-delay: 0.2s;
+            }
+            &:nth-child(2) a {
+              transition-delay: 0.3s;
+            }
+            &:nth-child(3) a {
+              transition-delay: 0.4s;
+            }
+            &:nth-child(4) a {
+              transition-delay: 0.5s;
+            }
+
+            &:not(:first-child) {
+              margin-left: 0;
+            }
+
+            a {
+              padding: 1rem 2rem;
+              opacity: 0;
+              color: black;
+              font-size: 1rem;
+              font-weight: 600;
+              transform: translateX(-20px);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+
+      .nav-toggle {
+        display: block;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        z-index: 999;
+      
+        .menu_toggle {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: black;
+          border-radius: 2px;
+          margin-left: 14px;
+
+          &:nth-child(1) {
+            margin-top: 16px;
+          }
+          &:nth-child(2) {
+            margin-top: 4px;
+            opacity: 1;
+          }
+          &:nth-child(3) {
+            margin-top: 4px;
+          }
+        } 
+
+      #nav:checked + .nav-toggle {
+        transform: rotate(45deg);
+
+        span {
+          background: black;
+          transition: transform 0.5s ease;
+
+          &:nth-child(1) {
+            transform: translateY(6px) rotate(180deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: translateY(-6px) rotate(90deg);
+          }
+        }
+      }
+    }
+      #nav:checked ~ .list_menu {
+        z-index: 99;
+        opacity: 1;
+      }
+        .menu {
+          &-item {
+            a {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+
+@media (min-width: 800px) {
+  .icons-link a{
+      font-size: 2rem;    
+  }
+  .icons-link,
+  ul{
+      margin-bottom: 2em;
+  }
+  ul a{
+      font-size: 1rem;
+  }
+  p{
+      font-size: 1rem;
+  }
+
+} 
